@@ -1,0 +1,2 @@
+export const JWT_SERVICE = "JWT_SERVICE";
+export const PRISMA_SERVICE = "PRISMA_SERVICE";

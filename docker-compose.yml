@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  backend:
+    image: ghcr.io/k4czp3r/express-api-boilerplate:v2
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8180:1337"
+  portgres:
+    image: postgres:12.2
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
